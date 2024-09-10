@@ -44,11 +44,7 @@ watch(name, (newVal) => {
 });
 
 onMounted(() => {
-  if (!localStorage.getItem["name"]) {
-    name.value = localStorage.getItem("name");
-  } else {
-    name.value = "";
-  }
+  name.value = localStorage.getItem("name");
   todos.value = JSON.parse(localStorage.getItem("todos")) || [];
 });
 </script>
